@@ -3,14 +3,20 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { VideoComponentComponent } from "./video-component/video-component.component";
 
+import {ChaptersComponent} from "./chapters/chapters.component";
+import {HttpClientModule} from '@angular/common/http';
+import {MatMenuModule} from '@angular/material/menu';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule, MatMenuModule,BrowserAnimationsModule,HttpClientModule
       ],
       declarations: [
-        AppComponent,VideoComponentComponent
+        AppComponent,VideoComponentComponent,ChaptersComponent
       ],
     }).compileComponents();
   }));
@@ -32,5 +38,7 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('Welcome to yvan!');
 });
+
+
 
 });
