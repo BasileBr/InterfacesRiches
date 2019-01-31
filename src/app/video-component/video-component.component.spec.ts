@@ -23,4 +23,9 @@ describe('VideoComponentComponent', () => {
     expect(component).toBeTruthy();
   });
 
+
+  it('should contain a video tag',() => {
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector("video")).toBeTruthy();
+  });
 });
