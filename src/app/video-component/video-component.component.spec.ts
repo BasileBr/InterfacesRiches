@@ -22,4 +22,5 @@ describe('VideoComponentComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
 });
