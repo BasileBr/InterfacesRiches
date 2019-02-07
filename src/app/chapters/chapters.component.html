@@ -1,13 +1,5 @@
-<p>
-  chapters works!
-</p>
-
-<li *ngFor="let chapter of chapters">
-{{chapter.title}}
-</li>
-
 <button mat-button [matMenuTriggerFor]="chaptersMenu">Chapters</button>
 <mat-menu #chaptersMenu>
-<button mat-menu-item *ngFor="let chapter of
-chapters" (click)="onSelect(chapter)"> {{ chapter.title }}</button>
+	<button mat-menu-item *ngFor="let chapter of chapters" (click)="onSelect(chapter)"> {{ chapter.title }}
+	</button>
 </mat-menu>
