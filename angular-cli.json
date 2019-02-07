@@ -1,0 +1,4 @@
+"styles": [
+        "styles.css",
+        "../node_modules/leaflet/dist/leaflet.css"
+      ]

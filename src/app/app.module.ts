@@ -9,19 +9,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VideoComponentComponent } from './video-component/video-component.component';
 import { ChaptersComponent } from './chapters/chapters.component';
+import { MapsComponent } from './maps/maps.component';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 @NgModule({
   declarations: [
     AppComponent,
     VideoComponentComponent,
-    ChaptersComponent
+    ChaptersComponent,
+    MapsComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     MatMenuModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LeafletModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

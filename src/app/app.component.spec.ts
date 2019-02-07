@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { VideoComponentComponent } from "./video-component/video-component.component";
 
 import {ChaptersComponent} from "./chapters/chapters.component";
+import {MapsComponent} from "./maps/maps.component"
 import {HttpClientModule} from '@angular/common/http';
 import {MatMenuModule} from '@angular/material/menu';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -16,7 +17,7 @@ describe('AppComponent', () => {
         RouterTestingModule, MatMenuModule,BrowserAnimationsModule,HttpClientModule
       ],
       declarations: [
-        AppComponent,VideoComponentComponent,ChaptersComponent
+        AppComponent,VideoComponentComponent,ChaptersComponent,MapsComponent
       ],
     }).compileComponents();
   }));
