@@ -8,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
 export class VideoComponentComponent implements OnInit {
 	url_mp4 = "https://archive.org/download/Route_66_-_an_American_badDream/Route_66_-_an_American_badDream_512kb.mp4"
 	url_ogg = "https://archive.org/download/Route_66_-_an_American_badDream/Route_66_-_an_American_badDream.ogv"
+	time = 0
 
   constructor() { }
 
   ngOnInit() {
   }
+
+  onChapterChange(pos:number){
+	console.log(pos);
+	this.time = pos
+	}
 
 }
