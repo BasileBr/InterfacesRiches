@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { VideoComponentComponent } from './video-component.component';
+import { ChaptersComponent } from '../chapters/chapters.component';
+import {HttpClientModule} from '@angular/common/http';
+import {MatMenuModule} from '@angular/material/menu';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 describe('VideoComponentComponent', () => {
   let component: VideoComponentComponent;
@@ -8,7 +11,8 @@ describe('VideoComponentComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ VideoComponentComponent ]
+    imports: [HttpClientModule,MatMenuModule,BrowserAnimationsModule],
+      declarations: [ VideoComponentComponent,ChaptersComponent ]
     })
     .compileComponents();
   }));
@@ -36,6 +40,6 @@ describe('VideoComponentComponent', () => {
     sources.forEach(function (currentValue, currentIndex, listObj) {
     expect(currentValue.type).toMatch(/video\/mp4|video\/ogg/);
   });
-});
+  });
 
 });

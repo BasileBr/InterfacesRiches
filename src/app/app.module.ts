@@ -10,7 +10,8 @@ import { AppComponent } from './app.component';
 import { VideoComponentComponent } from './video-component/video-component.component';
 import { ChaptersComponent } from './chapters/chapters.component';
 import { MapsComponent } from './maps/maps.component';
-import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+//import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,10 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet';
     MatMenuModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    LeafletModule.forRoot()
+//    LeafletModule.forRoot()
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyB9sLDybhg261fUD5i4KMIyHp-ikDCdvpc'
+  })
   ],
   providers: [],
   bootstrap: [AppComponent]

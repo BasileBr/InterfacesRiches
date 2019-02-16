@@ -1,8 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+//import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { MapsComponent } from './maps.component';
 import {HttpClientModule} from '@angular/common/http';
-
+import {MatMenuModule} from '@angular/material/menu';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 describe('MapsComponent', () => {
   let component: MapsComponent;
@@ -10,7 +11,7 @@ describe('MapsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientModule,LeafletModule],
+      imports: [HttpClientModule,MatMenuModule,BrowserAnimationsModule],
       declarations: [ MapsComponent ]
     })
     .compileComponents();
