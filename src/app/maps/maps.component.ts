@@ -5,6 +5,13 @@ import { GoogleMap } from '@agm/core/services/google-maps-types';
 import { UnServiceService } from '../un-service.service';
 import { Subscription } from 'rxjs/Subscription';
 import { AgmCoreModule } from '@agm/core';
+import { NgModule } from '@angular/core';
+
+@NgModule({
+  imports: [
+    AgmCoreModule
+  ]
+})
 
 @Component({
   selector: 'app-maps',
